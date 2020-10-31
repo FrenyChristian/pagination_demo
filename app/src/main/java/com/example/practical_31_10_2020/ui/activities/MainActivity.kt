@@ -67,7 +67,6 @@ class MainActivity : AppCompatActivity() {
                     Status.LOADING -> {
                         isLoading = true
                         progressBar.visibility = View.VISIBLE
-                        rvUsers.visibility = View.GONE
                     }
                 }
             }
@@ -102,63 +101,6 @@ class MainActivity : AppCompatActivity() {
 
         rvUsers.addOnScrollListener(recyclerViewOnScrollListener)
     }
-
-/*
-    private fun getUser(offset: Int) {
-        isLoading = true
-        val service: ApiService = RetrofitBuilder.getRetrofitInstance().create(
-            ApiService::class.java
-        )
-        val call = service.getUsers(offset, "5")
-        call.enqueue(object : retrofit2.Callback<ResponseBody> {
-            override fun onResponse(
-                call: retrofit2.Call<ResponseBody>,
-                response: Response<ResponseBody>
-            ) {
-                isLoading = false
-                if (!response.isSuccessful) {
-                    Log.e("test", "${response.code()}")
-                    return
-                }
-                val jsonObject = JSONObject(response.body()!!.string())
-                if (jsonObject.getBoolean("status")) {
-                    val data = jsonObject.getJSONObject("data")
-                    isLastPage = !data.getBoolean("has_more")
-                    val users = data.getJSONArray("users")
-                    val userList = arrayListOf<UserModel>()
-                    for (i in 0 until users.length()) {
-                        val userObject = users.getJSONObject(i)
-                        val items = userObject.getJSONArray("items")
-                        val imageList = arrayListOf<String>()
-                        for (i in 0 until items.length()) {
-                            imageList.add(items[i] as String)
-                        }
-                        userList.add(
-                            UserModel(
-                                userObject.getString("image"),
-                                userObject.getString("name"),
-                                imageList
-                            )
-                        )
-                    }
-
-                    setData(userList)
-
-                } else {
-                    Log.e("test", jsonObject.getString("message"))
-                }
-
-            }
-
-            override fun onFailure(call: retrofit2.Call<ResponseBody>, t: Throwable) {
-                t.printStackTrace()
-                isLoading = false
-                Log.e("test", t.message.toString())
-            }
-        })
-
-    }
-*/
 
     private fun setData(userList: ArrayList<UserModel>) {
         userAdapter?.apply {
