@@ -1,0 +1,20 @@
+com/example/practical_31_10_2020/databinding/RowImagesBinding.java
+ com.example.practical_31_10_2020.databinding.RowImagesBinding
+com/example/practical_31_10_2020/DataBindingTriggerClass.java
+ com.example.practical_31_10_2020.DataBindingTriggerClass
+com/example/practical_31_10_2020/databinding/RowImagesBindingImpl.java
+ com.example.practical_31_10_2020.databinding.RowImagesBindingImpl
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/example/practical_31_10_2020/DataBinderMapperImpl.java
+ com.example.practical_31_10_2020.DataBinderMapperImpl
+ com.example.practical_31_10_2020.DataBinderMapperImpl$InnerBrLookup
+ com.example.practical_31_10_2020.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/practical_31_10_2020/BuildConfig.java
+ com.example.practical_31_10_2020.BuildConfig
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/practical_31_10_2020/BR.java
+ com.example.practical_31_10_2020.BR
